@@ -1,0 +1,98 @@
+.encabezado {
+    border-bottom: 1px solid #ccc;
+    background: $color-principal;
+    color: $color-enlace;
+}
+
+.menu {
+    background: $color-principal;
+    color: $color-enlace;
+
+    .menu-contenedor {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 12px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            color: $color-enlace;
+            font-weight: bold;
+        }
+
+        .enlaces ul {
+            list-style: none;
+            display: flex;
+            gap: 16px;
+            margin: 0;
+            padding: 0;
+
+            a {
+                color: $color-enlace;
+            }
+
+            .link-activo {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.seccion {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    flex: 1;
+}
+
+.fila {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.columna {
+    flex: 1;
+}
+
+.media-mitad {
+    flex: 0 0 50%;
+}
+
+.centrado {
+    @include flex-center;
+}
+
+.seccion-hero {
+    padding: 24px 0;
+
+    .titulo-principal {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .texto-destacado {
+        font-size: 16px;
+    }
+}
+
+.footer {
+    background: $color-footer;
+    color: $color-enlace;
+    padding: 16px 0;
+    margin-top: auto;
+
+    .footer-contenido {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .footer-texto {
+            margin: 0;
+        }
+    }
+}

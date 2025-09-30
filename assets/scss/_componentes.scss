@@ -1,0 +1,234 @@
+.caja-ejemplo {
+    margin: 16px 0;
+    padding: 12px;
+    border: 2px solid $color-principal;
+    border-radius: $radio-borde;
+
+    .margen-cero {
+        margin: 0;
+    }
+}
+
+.titulo-seccion {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.boton-dark {
+    display: inline-block;
+    background: $color-principal;
+    color: $color-enlace;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.tarjetas {
+    @include grid-col(3);
+
+    .tarjeta {
+        background: $color-secundario;
+        border: 1px solid $color-borde;
+        border-radius: $radio-borde;
+        overflow: hidden;
+
+        .tarjeta-imagen {
+            width: 100%;
+        }
+
+        .tarjeta-cuerpo {
+            padding: 12px;
+        }
+
+        .tarjeta-titulo {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .tarjeta-texto {
+            margin: 0;
+            font-size: 14px;
+            color: #444;
+        }
+    }
+}
+
+.tarjetas-ref {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .tarjeta-ref {
+        width: 100%;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+        padding: 16px 18px;
+
+        .tarjeta-cuerpo {
+            p {
+                margin: 0 0 8px;
+                font-size: 14px;
+                color: #333;
+            }
+
+            .tarjeta-nombre {
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    .about-text {
+        flex: 1;
+    }
+
+    .about-img {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            max-width: 560px;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+/* CONTACTO */
+.main-contacto {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.formulario-centro {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.formulario-contacto {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
+}
+
+.formulario-contacto .campo-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contacto .campo-form label {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.formulario-contacto .campo-form input,
+.formulario-contacto .campo-form textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.formulario-contacto .campo-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.formulario-contacto .boton-dark,
+.formulario-contacto .btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    background: #000;
+    color: #fff;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+.footer {
+    margin-top: auto
+}
+
+@media (max-width: 768px) {
+    .formulario-centro {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+
+    .formulario-contacto {
+        padding: 20px;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.aparece {
+    animation: aparecer .25s ease-out both;
+}
+
+.about-text article.aparece:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.about-text article.aparece:nth-child(2) {
+    animation-delay: .15s;
+}
+
+.about-text article.aparece:nth-child(3) {
+    animation-delay: .25s;
+}
+
+.about-text .btn.aparece {
+    animation-delay: .35s;
+}
+
+.about-img.aparece {
+    animation-delay: .2s;
+}
